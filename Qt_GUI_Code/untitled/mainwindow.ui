@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>917</width>
+    <height>665</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="label">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">Background-color: #000;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3" rowspan="2" colspan="4">
+     <widget class="QCustomPlot" name="plot_position" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4" colspan="3">
+     <widget class="QCustomPlot" name="plot_velocityTime" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="4">
+     <widget class="QCustomPlot" name="plot_positionTime" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="btn_play">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>130</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Play</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="btn_reset">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>130</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Restart</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="btn_clearPlots">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>130</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Clear Plots</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>917</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPlot">
+    <property name="title">
+     <string>Playback</string>
+    </property>
+    <widget class="QMenu" name="menuAnalysis">
+     <property name="title">
+      <string>Analysis</string>
+     </property>
+     <addaction name="actionKCF"/>
+     <addaction name="actionFace_Detection"/>
+    </widget>
+    <addaction name="actionPlay"/>
+    <addaction name="actionReset"/>
+    <addaction name="menuAnalysis"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Plots</string>
+    </property>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>Image</string>
+     </property>
+     <addaction name="actionCenterXm_CenterYm"/>
+     <addaction name="actionTime_CenterXm_CenterYm"/>
+     <addaction name="actionTime_Velocity"/>
+    </widget>
+    <widget class="QMenu" name="menuLog">
+     <property name="title">
+      <string>CSV</string>
+     </property>
+     <addaction name="actionCenterXm_CenterYm_2"/>
+     <addaction name="actionTime_CenterXm_CenterYm_2"/>
+     <addaction name="actionTime_Velocity_2"/>
+     <addaction name="actionTime_PositionErrorX_PositionErrorY"/>
+     <addaction name="actionTime_BoundingBox"/>
+     <addaction name="actionTime_Angle"/>
+     <addaction name="actionTime_DetectorBoundingBox"/>
+    </widget>
+    <widget class="QMenu" name="menuToggle">
+     <property name="title">
+      <string>Toggle</string>
+     </property>
+     <widget class="QMenu" name="menuPosition_Time">
+      <property name="title">
+       <string>Position-Time</string>
+      </property>
+      <addaction name="actionCenterXm"/>
+      <addaction name="actionCenterYm"/>
+     </widget>
+     <widget class="QMenu" name="menuVelocity_Time">
+      <property name="title">
+       <string>Velocity-Time</string>
+      </property>
+      <addaction name="actionMagnitude"/>
+      <addaction name="actionVx"/>
+      <addaction name="actionVy"/>
+     </widget>
+     <addaction name="menuPosition_Time"/>
+     <addaction name="menuVelocity_Time"/>
+    </widget>
+    <addaction name="actionClearPlots"/>
+    <addaction name="actionReplotAll"/>
+    <addaction name="menuSave"/>
+    <addaction name="menuLog"/>
+    <addaction name="menuToggle"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp_2">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuNTUST_Treadmill">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuMechanism">
+    <property name="title">
+     <string>Mechanism</string>
+    </property>
+    <addaction name="actionSet_USB_Port"/>
+   </widget>
+   <addaction name="menuNTUST_Treadmill"/>
+   <addaction name="menuPlot"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuMechanism"/>
+   <addaction name="menuHelp_2"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load Video</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="text">
+    <string>Play/Stop</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Restart</string>
+   </property>
+  </action>
+  <action name="actionClearPlots">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+   <property name="toolTip">
+    <string>Replot All</string>
+   </property>
+  </action>
+  <action name="actionReplotAll">
+   <property name="text">
+    <string>Replot</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionCenterXm_CenterYm">
+   <property name="text">
+    <string>CenterXm, CenterYm</string>
+   </property>
+  </action>
+  <action name="actionTime_CenterXm_CenterYm">
+   <property name="text">
+    <string>Time, CenterXm, CenterYm</string>
+   </property>
+  </action>
+  <action name="actionTime_Velocity">
+   <property name="text">
+    <string>Time, Velocity</string>
+   </property>
+  </action>
+  <action name="actionCenterXm_CenterYm_2">
+   <property name="text">
+    <string>CenterXm, CenterYm</string>
+   </property>
+  </action>
+  <action name="actionTime_CenterXm_CenterYm_2">
+   <property name="text">
+    <string>Time, CenterXm, CenterYm</string>
+   </property>
+  </action>
+  <action name="actionTime_Velocity_2">
+   <property name="text">
+    <string>Time, Velocity</string>
+   </property>
+  </action>
+  <action name="actionCenterXm">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>CenterXm</string>
+   </property>
+  </action>
+  <action name="actionMagnitude">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Magnitude</string>
+   </property>
+  </action>
+  <action name="actionVx">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Vx</string>
+   </property>
+  </action>
+  <action name="actionVy">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Vy</string>
+   </property>
+  </action>
+  <action name="actionCenterYm">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>CenterYm</string>
+   </property>
+  </action>
+  <action name="actionTime_PositionErrorX_PositionErrorY">
+   <property name="text">
+    <string>Time, CenterLocationError</string>
+   </property>
+  </action>
+  <action name="actionTime_BoundingBox">
+   <property name="text">
+    <string>Time, BoundingBox</string>
+   </property>
+  </action>
+  <action name="actionTime_Angle">
+   <property name="text">
+    <string>Time, Angle</string>
+   </property>
+  </action>
+  <action name="actionTime_DetectorBoundingBox">
+   <property name="text">
+    <string>Time, DetectorBoundingBox</string>
+   </property>
+  </action>
+  <action name="actionKCF">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>KCF + Face Detection</string>
+   </property>
+  </action>
+  <action name="actionFace_Detection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Face Detection</string>
+   </property>
+  </action>
+  <action name="actionSet_USB_Port">
+   <property name="text">
+    <string>Set USB Port</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
