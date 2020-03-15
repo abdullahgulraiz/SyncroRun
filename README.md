@@ -23,7 +23,7 @@ To initiate process, the user would step on treadmill and look into the camera b
 
 ### Requirements
 
-The following software and hardware requirements were met when the codes when the project was undertaken. 
+The following software and hardware requirements were met when the project was undertaken. 
 
 #### GUI Application
 
