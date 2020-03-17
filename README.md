@@ -1,6 +1,6 @@
 # SyncroRun
 
-The repository serves to host the code written as part of my bachelor thesis at [Department of Mechatronics Engineering](http://www.nust.edu.pk/INSTITUTIONS/Colleges/CEME/Departments/Mechatronics%20Engineering/Pages/default.aspx), National University of Sciences and Technology, Pakistan. The project developed was a prototype of the US-patent [US 8926475B2](https://patents.google.com/patent/US8926475). 
+The repository serves to host the code written as part of my bachelor thesis at Department of Mechatronics Engineering, [National University of Sciences and Technology](www.nust.edu.pk), Pakistan. The project developed was a prototype of the US-patent [US 8926475B2](https://patents.google.com/patent/US8926475). 
 
 ## Introduction
 
