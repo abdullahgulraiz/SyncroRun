@@ -1,6 +1,6 @@
 # SyncroRun
 
-The repository serves to host the code written as part of my bachelor thesis at [Department of Mechatronics Engineering](ceme.nust.edu.pk), National University of Sciences and Technology, Pakistan. The project developed was a prototype of the US-patent [US 8926475B2](https://patents.google.com/patent/US8926475). 
+The repository serves to host the code written as part of my bachelor thesis at Department of Mechatronics Engineering, [National University of Sciences and Technology](http://nust.edu.pk), Pakistan. The project developed was a prototype of the US-patent [US 8926475B2](https://patents.google.com/patent/US8926475). 
 
 ## Introduction
 
@@ -23,7 +23,7 @@ To initiate process, the user would step on treadmill and look into the camera b
 
 ### Requirements
 
-The following software and hardware requirements were met when the codes when the project was undertaken. 
+The following software and hardware requirements were met when the project was undertaken. 
 
 #### GUI Application
 
