@@ -52,3 +52,11 @@ compile_commands.json
 *creator.user*
 
 *_qmlcache.qrc
+
+# Dataset files
+*.csv
+*.txt
+
+# Outputs
+*.bmp
+*.JPG
