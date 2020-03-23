@@ -1,3 +1,6 @@
+[![Purpose](https://img.shields.io/badge/Purpose-Academic-blue.svg)](https://github.com/abdullahgulraiz/SyncroRun)     [![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://github.com/abdullahgulraiz/SyncroRun)
+
+
 # SyncroRun
 
 The repository serves to host the code written as part of my bachelor thesis at Department of Mechatronics Engineering, [National University of Sciences and Technology](http://nust.edu.pk), Pakistan. The project developed was a prototype of the US-patent [US 8926475B2](https://patents.google.com/patent/US8926475). 
